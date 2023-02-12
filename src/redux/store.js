@@ -3,6 +3,7 @@ import productSlice from "./features/product/productSlice";
 import {productsApi} from "./services/products";
 import {setupListeners} from "@reduxjs/toolkit/query";
 import cartSlice from "./features/cart/cartSlice";
+import {cartMiddleware} from "./features/cart/localSave";
 export const store = configureStore({
     reducer: {
         products: productSlice,

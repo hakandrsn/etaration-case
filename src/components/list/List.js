@@ -7,11 +7,11 @@ import {
 import PaginationComponent from "./Pagination";
 import Grid2 from "@mui/material/Unstable_Grid2";
 import {useDispatch, useSelector} from "react-redux";
-import {newListData} from "../redux/features/product/productSlice";
+import {newListData} from "../../redux/features/product/productSlice";
 import {uniqBy} from "lodash";
-import {sortedProducts} from "../funcs/filter";
+import {sortedProducts} from "../../funcs/filter";
 import CardCustom from './CardCustom';
-import useWindowSize from '../hooks/useWindowSize';
+import useWindowSize from '../../hooks/useWindowSize';
 
 const List = () => {
     const {
@@ -45,7 +45,6 @@ const List = () => {
             })
         })
         const uniqData = newData.length < 1 ? uniqBy(data, "id") : uniqBy(newData, 'id')
-        console.log(uniqData)
         const pageData = uniqData.slice((page - 1) * pagePass, page * pagePass);
         return {"pageData":sortedProducts(pageData, sort),"dataCount":uniqData.length}
     }
@@ -61,7 +60,7 @@ const List = () => {
     if (error) return <div>Something went wrong</div>
     const ListData = () => {
         return (
-            <Grid2 sx={{flexGrow: 1}} container spacing={3} display="flex" justifyContent="flex-start">
+            <Grid2 sx={{flexGrow: 1}} container spacing={3} display="flex" justifyContent="center">
                 {filteredData && filteredData?.map((item) => {
                     return (
                         <Grid2 sx={{minWidth: 200, maxWidth: 245}} key={item.id} item xs={8} md={2}>

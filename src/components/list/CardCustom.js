@@ -1,7 +1,7 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addCart, deleteCart } from '../redux/features/cart/cartSlice';
+import { addCart, deleteCart } from '../../redux/features/cart/cartSlice';
 import {Link} from "react-router-dom";
 
 const CardCustom = ({item}) => {

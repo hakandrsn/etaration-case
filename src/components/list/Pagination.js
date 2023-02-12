@@ -2,7 +2,7 @@ import * as React from 'react';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import {useDispatch, useSelector} from "react-redux";
-import {changePage} from "../redux/features/product/productSlice";
+import {changePage} from "../../redux/features/product/productSlice";
 
 const PaginationComponent = ({count}) => {
     const {page} = useSelector(state => state.products)

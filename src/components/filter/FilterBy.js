@@ -38,7 +38,7 @@ const FilterBy = ({data, title,func}) => {
             let newData = data.filter(item => item.toLowerCase().includes(sh.toLowerCase()))
             return setDatas(newData)
         }
-    },[sh])
+    },[sh,datas.length,data.length])
     return (
         <Grid2 item xs={{
             xs: 12
