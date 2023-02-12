@@ -33,7 +33,7 @@ const Cart = () => {
                 width: 20,
                 alignContent: "center"
             }}>
-                <button onClick={() => dispatch(decrementCount(id))} style={{
+                <button data-testid="remove" onClick={() => dispatch(decrementCount(id))} style={{
                     fontSize: 20,
                     marginBottom: 4,
                     border: "none",

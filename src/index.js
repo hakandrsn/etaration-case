@@ -16,8 +16,8 @@ root.render(
             <CssBaseline/>
             <BrowserRouter>
                 <Switch>
-                    <Route path="/products" render={(props)=> <ProductLayout {...props} />} />
-                    <Redirect to="/products" from="/" />
+                    <Route path="/product" render={(props)=> <ProductLayout {...props} />} />
+                    <Redirect to="/product" from="/" />
                 </Switch>
             </BrowserRouter>
         </Provider>

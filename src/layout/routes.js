@@ -3,13 +3,15 @@ import DetailProduct from "../pages/DetailProduct";
 
 export const routes = [
     {
-        path: '/products',
+        path: '',
         component: ListProduct,
         exact: true,
+        layout: '/product'
     },
     {
-        path: '/product/:id',
+        path: '/:id',
         component: DetailProduct,
         exact: true,
+        layout: '/product'
     }
 ]
